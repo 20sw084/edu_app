@@ -1,4 +1,5 @@
 import 'package:edu_app/View/FourthScreen.dart';
+import 'package:edu_app/View/SignUpPage.dart';
 import 'package:flutter/material.dart';
 
 class ThirdScreen extends StatefulWidget {
@@ -11,6 +12,8 @@ class ThirdScreen extends StatefulWidget {
 class _ThirdScreenState extends State<ThirdScreen> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
+
+  bool _obscureText = true;
 
   @override
   Widget build(BuildContext context) {
@@ -33,18 +36,12 @@ class _ThirdScreenState extends State<ThirdScreen> {
               'Login Now',
               style: SignInTextStyle.textStyle,
             ),
-            // const SizedBox(
-            //   height: 5, // <-- SEE HERE
-            // ),
             const Text(
               'Please Enter the details below to continue.',
               style: TextStyle(
                 fontSize: 20,
               ),
             ),
-            // const SizedBox(
-            //   height: 30, // <-- SEE HERE
-            // ),
             Padding(
               padding: const EdgeInsets.all(15),
               child: TextField(
@@ -55,14 +52,24 @@ class _ThirdScreenState extends State<ThirdScreen> {
                 ),
               ),
             ),
-            // const SizedBox(
-            //   height: 10, // <-- SEE HERE
-            // ),
             Padding(
               padding: const EdgeInsets.all(15),
-              child: TextField(
+              child: TextFormField(
+                obscureText: _obscureText,
                 controller: passwordController,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
+                  suffixIcon: GestureDetector(
+                    onTap: () {
+                      setState(
+                        () {
+                          _obscureText = !_obscureText;
+                        },
+                      );
+                    },
+                    child: Icon(
+                      _obscureText ? Icons.visibility : Icons.visibility_off,
+                    ),
+                  ),
                   border: OutlineInputBorder(),
                   hintText: 'password',
                 ),
@@ -123,12 +130,22 @@ class _ThirdScreenState extends State<ThirdScreen> {
             const SizedBox(
               height: 30, // <-- SEE HERE
             ),
-            const Center(
-              child: Text(
-                'Dont have an account. Let\'s SignUp!',
-                style: TextStyle(
-                  fontSize: 20,
+            Center(
+              child: GestureDetector(
+                child: const Text(
+                  'Dont have an account. Let\'s SignUp!',
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
                 ),
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SignUpPage(),
+                    ),
+                  );
+                },
               ),
             ),
           ],

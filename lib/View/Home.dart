@@ -1,7 +1,5 @@
 import 'dart:async';
-import 'package:edu_app/View/FourthScreen.dart';
 import 'package:edu_app/View/SecondScreen.dart';
-import 'package:edu_app/View/ThirdScreen.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -30,11 +28,11 @@ class _LandingScreenState extends State<LandingScreen> {
   void initState() {
     super.initState();
     Timer(
-      const Duration(seconds: 5),
+      const Duration(seconds: 3),
       () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => const FourthScreen(),
+          builder: (context) => const SecondScreen(),
         ),
       ),
     );
