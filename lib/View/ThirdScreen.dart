@@ -36,10 +36,13 @@ class _ThirdScreenState extends State<ThirdScreen> {
               'Login Now',
               style: SignInTextStyle.textStyle,
             ),
-            const Text(
-              'Please Enter the details below to continue.',
-              style: TextStyle(
-                fontSize: 20,
+            const Padding(
+              padding: EdgeInsets.all(15.0),
+              child: Text(
+                'Please Enter the details below to continue.',
+                style: TextStyle(
+                  fontSize: 20,
+                ),
               ),
             ),
             Padding(
@@ -78,52 +81,58 @@ class _ThirdScreenState extends State<ThirdScreen> {
             const SizedBox(
               height: 80, // <-- SEE HERE
             ),
-            Row(
-              children: const <Widget>[
-                Spacer(flex: 2),
-                Text(
-                  'Forgot Password?',
-                  style: TextStyle(
-                    color: Colors.orange,
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
+            Padding(
+              padding: const EdgeInsets.only(right: 18.0),
+              child: Row(
+                children: const <Widget>[
+                  Spacer(flex: 2),
+                  Text(
+                    'Forgot Password?',
+                    style: TextStyle(
+                      color: Colors.orange,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             const SizedBox(
               height: 20, // <-- SEE HERE
             ),
-            ElevatedButton(
-              onPressed: () {
-                if (emailController.text == 'junaid@gmail.com' &&
-                    passwordController.text == 'junaid') {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const FourthScreen(),
-                    ),
-                  );
-                } else {
-                  showDialog(
-                    context: context,
-                    builder: (context) {
-                      return const AlertDialog(
-                        content: Text("Invalid Email or Password"),
-                      );
-                    },
-                  );
-                }
-              },
-              style: ElevatedButton.styleFrom(
-                foregroundColor: Colors.black,
-                backgroundColor: Colors.orange,
-                minimumSize: const Size.fromHeight(50),
-              ),
-              child: const Text(
-                'Login',
-                style: TextStyle(
-                  fontSize: 25,
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: ElevatedButton(
+                onPressed: () {
+                  if (emailController.text == 'junaid@gmail.com' &&
+                      passwordController.text == 'junaid') {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const FourthScreen(),
+                      ),
+                    );
+                  } else {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return const AlertDialog(
+                          content: Text("Invalid Email or Password"),
+                        );
+                      },
+                    );
+                  }
+                },
+                style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.black,
+                  backgroundColor: Colors.orange,
+                  minimumSize: const Size.fromHeight(50),
+                ),
+                child: const Text(
+                  'Login',
+                  style: TextStyle(
+                    fontSize: 25,
+                  ),
                 ),
               ),
             ),

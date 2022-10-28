@@ -53,18 +53,21 @@ class _SignUpPageState extends State<SignUpPage> {
                   fontWeight: FontWeight.normal,
                 ),
               ),
-              const SizedBox(
-                height: 10,
-              ),
-              TextField(
-                controller: _signUpEmailController,
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: 'Email',
+              // const SizedBox(
+              //   height: 10,
+              // ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: TextField(
+                  controller: _signUpEmailController,
+                  decoration: const InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'Email',
+                  ),
                 ),
               ),
               const SizedBox(
-                height: 40,
+                height: 20,
               ),
               const Text(
                 'Please enter your Password:',
@@ -73,31 +76,34 @@ class _SignUpPageState extends State<SignUpPage> {
                   fontWeight: FontWeight.normal,
                 ),
               ),
-              const SizedBox(
-                height: 10,
-              ),
-              TextFormField(
-                controller: _signUpPassController,
-                obscureText: _obscureText1,
-                decoration: InputDecoration(
-                  suffixIcon: GestureDetector(
-                    onTap: () {
-                      setState(
-                        () {
-                          _obscureText1 = !_obscureText1;
-                        },
-                      );
-                    },
-                    child: Icon(
-                      _obscureText1 ? Icons.visibility : Icons.visibility_off,
+              // const SizedBox(
+              //   height: 10,
+              // ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: TextFormField(
+                  controller: _signUpPassController,
+                  obscureText: _obscureText1,
+                  decoration: InputDecoration(
+                    suffixIcon: GestureDetector(
+                      onTap: () {
+                        setState(
+                          () {
+                            _obscureText1 = !_obscureText1;
+                          },
+                        );
+                      },
+                      child: Icon(
+                        _obscureText1 ? Icons.visibility : Icons.visibility_off,
+                      ),
                     ),
+                    border: const OutlineInputBorder(),
+                    hintText: 'Password',
                   ),
-                  border: const OutlineInputBorder(),
-                  hintText: 'Password',
                 ),
               ),
               const SizedBox(
-                height: 40,
+                height: 20,
               ),
               const Text(
                 'Please confirm your Password:',
@@ -106,64 +112,70 @@ class _SignUpPageState extends State<SignUpPage> {
                   fontWeight: FontWeight.normal,
                 ),
               ),
-              const SizedBox(
-                height: 10,
-              ),
-              TextFormField(
-                controller: _signUpCPassController,
-                obscureText: _obscureText2,
-                decoration: InputDecoration(
-                  suffixIcon: GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        _obscureText2 = !_obscureText2;
-                      });
-                    },
-                    child: Icon(
-                      _obscureText2 ? Icons.visibility : Icons.visibility_off,
-                    ),
-                  ),
-                  border: const OutlineInputBorder(),
-                  hintText: 'Confirm Password',
-                ),
-              ),
-              const SizedBox(
-                height: 50,
-              ),
-              OutlinedButton(
-                onPressed: () {
-                  if (_signUpEmailController.text.contains('@') &&
-                      _signUpPassController.text ==
-                          _signUpCPassController.text) {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const ThirdScreen(),
-                      ),
-                    );
-                  } else {
-                    showDialog(
-                      context: context,
-                      builder: (context) {
-                        return const AlertDialog(
-                          content: Text("ERROR!! Something went wrong"),
-                        );
+              // const SizedBox(
+              //   height: 10,
+              // ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: TextFormField(
+                  controller: _signUpCPassController,
+                  obscureText: _obscureText2,
+                  decoration: InputDecoration(
+                    suffixIcon: GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          _obscureText2 = !_obscureText2;
+                        });
                       },
-                    );
-                  }
-                },
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.orange),
-                  foregroundColor: MaterialStateProperty.all(Colors.white),
+                      child: Icon(
+                        _obscureText2 ? Icons.visibility : Icons.visibility_off,
+                      ),
+                    ),
+                    border: const OutlineInputBorder(),
+                    hintText: 'Confirm Password',
+                  ),
                 ),
-                child: const SizedBox(
-                  height: 60,
-                  child: Center(
-                    child: Text(
-                      'Sign Up',
-                      style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold,
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: OutlinedButton(
+                  onPressed: () {
+                    if (_signUpEmailController.text.contains('@') &&
+                        _signUpPassController.text ==
+                            _signUpCPassController.text) {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ThirdScreen(),
+                        ),
+                      );
+                    } else {
+                      showDialog(
+                        context: context,
+                        builder: (context) {
+                          return const AlertDialog(
+                            content: Text("ERROR!! Something went wrong"),
+                          );
+                        },
+                      );
+                    }
+                  },
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.orange),
+                    foregroundColor: MaterialStateProperty.all(Colors.white),
+                  ),
+                  child: const SizedBox(
+                    height: 60,
+                    child: Center(
+                      child: Text(
+                        'Sign Up',
+                        style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),

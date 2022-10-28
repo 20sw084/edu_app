@@ -50,7 +50,7 @@ class _FourthScreenState extends State<FourthScreen> {
                     ),
                     const Center(
                       child: Text(
-                        "My Qutor",
+                        "My Tutor",
                         style: TextStyle(
                           fontSize: 40,
                           fontWeight: FontWeight.bold,
@@ -91,7 +91,7 @@ class _FourthScreenState extends State<FourthScreen> {
                     ),
                     CircleAvatar(
                       backgroundImage: AssetImage("assets/images/pic.png"),
-                      radius: (55),
+                      radius: (50),
                       backgroundColor: Colors.white,
                     ),
                   ],
@@ -121,7 +121,7 @@ class _FourthScreenState extends State<FourthScreen> {
                         color: Colors.orange,
                       ),
                       Text(
-                        "Wagsa Maju",
+                        "Islamabad, Pakistan",
                         style: TextStyle(color: Colors.orange),
                       ),
                       SizedBox(
@@ -219,7 +219,7 @@ class _FourthScreenState extends State<FourthScreen> {
                                     Text(
                                       "Class Duration",
                                       style: TextStyle(
-                                        fontSize: 15,
+                                        fontSize: 12,
                                         fontWeight: FontWeight.normal,
                                       ),
                                     ),
@@ -228,7 +228,7 @@ class _FourthScreenState extends State<FourthScreen> {
                                       child: Text(
                                         "1.5 hrs approx:",
                                         style: TextStyle(
-                                          fontSize: 15,
+                                          fontSize: 12,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -250,7 +250,7 @@ class _FourthScreenState extends State<FourthScreen> {
                                     Text(
                                       "Timings (All Day)",
                                       style: TextStyle(
-                                        fontSize: 15,
+                                        fontSize: 12,
                                         fontWeight: FontWeight.normal,
                                       ),
                                     ),
@@ -259,7 +259,7 @@ class _FourthScreenState extends State<FourthScreen> {
                                       child: Text(
                                         "Intensive Quran Recitation",
                                         style: TextStyle(
-                                          fontSize: 15,
+                                          fontSize: 12,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -385,7 +385,7 @@ class _FourthScreenState extends State<FourthScreen> {
                                     Text(
                                       "Class Duration",
                                       style: TextStyle(
-                                        fontSize: 15,
+                                        fontSize: 12,
                                         fontWeight: FontWeight.normal,
                                       ),
                                     ),
@@ -394,7 +394,7 @@ class _FourthScreenState extends State<FourthScreen> {
                                       child: Text(
                                         "2 hrs approx:",
                                         style: TextStyle(
-                                          fontSize: 15,
+                                          fontSize: 12,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -416,7 +416,7 @@ class _FourthScreenState extends State<FourthScreen> {
                                     Text(
                                       "Timings (2 slots)",
                                       style: TextStyle(
-                                        fontSize: 15,
+                                        fontSize: 12,
                                         fontWeight: FontWeight.normal,
                                       ),
                                     ),
@@ -425,7 +425,7 @@ class _FourthScreenState extends State<FourthScreen> {
                                       child: Text(
                                         "Al-Quran Basic Class",
                                         style: TextStyle(
-                                          fontSize: 15,
+                                          fontSize: 12,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -548,7 +548,7 @@ class _FourthScreenState extends State<FourthScreen> {
                                     Text(
                                       "Class Duration",
                                       style: TextStyle(
-                                        fontSize: 15,
+                                        fontSize: 12,
                                         fontWeight: FontWeight.normal,
                                       ),
                                     ),
@@ -557,7 +557,7 @@ class _FourthScreenState extends State<FourthScreen> {
                                       child: Text(
                                         "2 hrs approx:",
                                         style: TextStyle(
-                                          fontSize: 15,
+                                          fontSize: 12,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -579,7 +579,7 @@ class _FourthScreenState extends State<FourthScreen> {
                                     Text(
                                       "Timings (2 slots)",
                                       style: TextStyle(
-                                        fontSize: 15,
+                                        fontSize: 12,
                                         fontWeight: FontWeight.normal,
                                       ),
                                     ),
@@ -588,7 +588,7 @@ class _FourthScreenState extends State<FourthScreen> {
                                       child: Text(
                                         "Intensive Quran Recitation",
                                         style: TextStyle(
-                                          fontSize: 15,
+                                          fontSize: 12,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
